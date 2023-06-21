@@ -17,7 +17,7 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "C:/Users/Pwl/Documents/GitHub/Second-hand_Transaction_Platform/uni_app-Second-hand_Transaction_Platform/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "C:/Users/Pwl/Program/WHU/大一第三学期/program/Second-hand_Transaction_Platform/uni_app-Second-hand_Transaction_Platform/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   return {
