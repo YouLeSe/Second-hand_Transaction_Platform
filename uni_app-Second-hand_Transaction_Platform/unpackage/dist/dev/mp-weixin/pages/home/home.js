@@ -2,7 +2,18 @@
 const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
-    return {};
+    return {
+      //分类导航的数据列表
+      navList: []
+    };
+  },
+  onLoad() {
+    this.getNavList();
+  },
+  methods: {
+    getNavList() {
+      common_vendor.index.$http.get();
+    }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
