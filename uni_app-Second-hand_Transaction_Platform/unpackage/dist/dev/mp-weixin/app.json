@@ -1,12 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/my/my",
-    "static/tab_icons/tab_icons"
+    "pages/my/my"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "珞珈二手宝",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
