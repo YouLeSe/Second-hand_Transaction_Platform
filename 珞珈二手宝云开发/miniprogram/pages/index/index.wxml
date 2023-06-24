@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="row" wx:for="{{5}}" wx:key="index">
+    <view class="title">{{index+1}}、这是一个标题</view>
+    <view>阅读量：333</view>
+</view>
