@@ -43,23 +43,22 @@
 }
 
 /*  商品列表  */
-.home-list{
-  width: 100% ;
-  height: 100%;
-  background: rgb(255, 255, 255);
+.home-list {
+  width: 100%;
+  background: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
+  margin: 0 20px;
 }
 
-.home-list-good{
-  width: 100% ;
-  height: 100%;
-  background: lightblue;
+.home-list-good {
+  background: #cdeffd;
+  border: 2px solid #ccc;
+  border-radius: 10px;
   display: flex;
-  flex-direction: row;
 }
 
-.home-list-good-head{
+.home-list-good-head {
   width: 50px;
   height: 50px;
   border: solid 0.05rem #34b3de;
@@ -67,60 +66,68 @@
   overflow: hidden;
   background-size: cover;
   background-position: 50%;
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center;
 }
 
-.home-list-good-up{
+.home-list-good-up {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   font-size: 14px;
-  padding-left: 50px;
-  padding-right: 10px;
-  box-sizing: border-box;  
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.home-list-good-up-name{
-  padding-left: 80px;
+.home-list-good-up-name {
+  padding-left: 30px;
   font-size: 18px;
 }
 
-.home-list-good-up-date{
-  padding-left: 80px;
+.home-list-good-up-date {
+  padding-left: 30px;
   font-size: 12px;
-  color: lightgray;
+  color: rgba(0, 0, 0, 0.76);
 }
 
-.home-list-good-price{
-  padding-left: 150px;
+.home-list-good-price {
+  padding-left: 100px;
   font-size: 20px;
 }
 
-.home-list-good-details{
-  background-color: white;
-  margin-left: 70px;
-  margin-right: 30px;
+.home-list-good-details {
+  background-color: #fff;
+  margin: 20px 30px;
   letter-spacing: 1px;
   font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
-.home-list-good-image{
+.home-list-good-img {
+  margin-left: 70px;
+}
+
+.home-list-good-image {
   border: 2px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: row;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
-  margin-bottom: 20px;
-  margin-left: 70px;
-  background-color: rgb(255, 255, 255);
+  width: 20%;
+  margin: 20px 10px;
+  background-color: #fff;
 }
 
-.home-list-good-contact{
+.home-list-good-contact {
+  display: flex;
+  align-items: center;
 }
 
 .home-list-good-contact .icon-chato{
@@ -128,10 +135,14 @@
 }
 
 .home-list-good-contact .icon-contact{
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .home-list-good-contact .icon-phone{
-  margin-left: 50px;
+  margin-left: 40px;
+}
+
+.home-list-good-contact .icon-star{
+  margin-left: 40px;
 }
 

@@ -21,7 +21,6 @@
   <view class = "home-type">
     <van-tabs active="{{ active }}" bind:change="onChange">
     <van-tab title="全部">
-      <van-divider />
       <view class = "home-list" >
     <view class = "home-list-good">
       <view class = "home-list-good-head">
@@ -47,23 +46,32 @@
     <view class = "home-list-good-details">
     商品详情介绍：Apple MacBook Pro 是苹果公司推出的一款高端笔记本电脑，它采用了苹果公司自主研发的 M1 芯片，具有出色的性能和长久的续航能力。它的外观设计简约而精致，采用了铝合金外壳和玻璃触控板，手感非常舒适。此外，它的屏幕分辨率高，色彩鲜艳，为用户提供了非常出色的视觉效果。
     </view>
-    <view class = "home-list-good-image">
-    商品图片1
+
+
+
+    <view class = "home-list-good-img">
+      <view class = "home-list-good-image">
+      商品图片1
+      </view>
+      <view class = "home-list-good-image">
+      商品图片2
+      </view>
+      <view class = "home-list-good-image">
+      商品图片3
+      </view>
     </view>
-    <view class = "home-list-good-image">
-    商品图片2
-    </view>
-    <view class = "home-list-good-image">
-    商品图片3
-    </view>
+
+    
 
     <view class="home-list-good-contact" 
     
     >
-      <van-icon name="chat-o" size="40px" class="icon-chato"/>
-      <van-icon name="contact" size="40px" class="icon-contact"/>
-      <van-icon name="phone-o" size="40px"
+      <van-icon name="chat-o" size="30px" class="icon-chato"/>
+      <van-icon name="contact" size="30px" class="icon-contact"/>
+      <van-icon name="phone-o" size="30px"
       class="icon-phone"/>
+      <van-icon name="star-o" size="30px"
+      class="icon-star"/>
     </view>
 
     
@@ -76,10 +84,10 @@
     <van-divider />
     内容 2 
     </van-tab>
-    <van-tab title="日用品"><van-divider />内容 3</van-tab>
-    <van-tab title="数码"><van-divider />内容 4</van-tab>
-    <van-tab title="服装"><van-divider />内容 5</van-tab>
-    <van-tab title="车类"><van-divider />内容 6</van-tab>
+    <van-tab title="日用品">内容 3</van-tab>
+    <van-tab title="数码">内容 4</van-tab>
+    <van-tab title="服装">内容 5</van-tab>
+    <van-tab title="车类">内容 6</van-tab>
     </van-tabs>
   </view>
 
