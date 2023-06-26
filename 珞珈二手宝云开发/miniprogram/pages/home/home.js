@@ -7,11 +7,23 @@ Page({
   data: {
 
   },
+gotoSearch()
+{
+  console.log("跳转到搜索页面")
+  wx.navigateTo({
+    url: '/pages/search/search',
+  })
+},
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
   },
 
   /**
