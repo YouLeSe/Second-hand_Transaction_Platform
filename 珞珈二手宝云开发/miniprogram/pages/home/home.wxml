@@ -1,0 +1,88 @@
+
+
+
+<view class = "home-container">
+
+  <view class = "home-search-bar">
+  
+    <view class = "home-search-icon">
+
+    <van-icon name="search">
+    </van-icon>
+
+    </view>
+    
+    <input type="text" 
+    placeholder="请输入关键字进行查询"
+    class = "home-search-input"/>
+
+  </view>
+
+  <view class = "home-type">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="全部">
+      <van-divider />
+      <view class = "home-list" >
+    <view class = "home-list-good">
+      <view class = "home-list-good-head">
+        头像
+      </view>
+      <view class = home-list-good-up>
+        <view class="home-list-good-up-name">
+        商品名称
+        </view>
+        
+        <view class="home-list-good-up-date">
+        发布时间
+        </view>
+        
+      </view>
+
+      <view class = "home-list-good-price">
+        $ 88
+      </view>
+      
+    </view>
+
+    <view class = "home-list-good-details">
+    商品详情介绍：Apple MacBook Pro 是苹果公司推出的一款高端笔记本电脑，它采用了苹果公司自主研发的 M1 芯片，具有出色的性能和长久的续航能力。它的外观设计简约而精致，采用了铝合金外壳和玻璃触控板，手感非常舒适。此外，它的屏幕分辨率高，色彩鲜艳，为用户提供了非常出色的视觉效果。
+    </view>
+    <view class = "home-list-good-image">
+    商品图片1
+    </view>
+    <view class = "home-list-good-image">
+    商品图片2
+    </view>
+    <view class = "home-list-good-image">
+    商品图片3
+    </view>
+
+    <view class="home-list-good-contact" 
+    
+    >
+      <van-icon name="chat-o" size="40px" class="icon-chato"/>
+      <van-icon name="contact" size="40px" class="icon-contact"/>
+      <van-icon name="phone-o" size="40px"
+      class="icon-phone"/>
+    </view>
+
+    
+
+   
+
+  </view>
+    </van-tab>
+    <van-tab title="书籍">
+    <van-divider />
+    内容 2 
+    </van-tab>
+    <van-tab title="日用品"><van-divider />内容 3</van-tab>
+    <van-tab title="数码"><van-divider />内容 4</van-tab>
+    <van-tab title="服装"><van-divider />内容 5</van-tab>
+    <van-tab title="车类"><van-divider />内容 6</van-tab>
+    </van-tabs>
+  </view>
+
+  
+
+</view>
