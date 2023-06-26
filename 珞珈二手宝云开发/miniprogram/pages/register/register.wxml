@@ -1,0 +1,75 @@
+<!--pages/register/register.wxml-->
+
+<view class="register">
+<view class="whuicon">
+<image src="/images/whuicon.png"></image>
+</view>
+<view class="titleArea">
+<view class="title">珞珈二手宝</view>
+</view>
+<view class="registerImf">
+<van-cell-group inset >
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    placeholder="请输入用户名"
+    bind:change="onChangeUsername"
+  />
+
+  <van-field
+    value="{{ stunum }}"
+    required
+    clearable
+    label="学号"
+    placeholder="请输入学号"
+    bind:change="onChangeStunum"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码(6位数以上）"
+    required
+    bind:change="onChangePassword"
+  />
+
+  <van-field
+    value="{{ repassword }}"
+    type="password"
+    label="确认密码"
+    placeholder="请确认密码"
+    required
+    bind:change="onChangeRepassword"
+  />
+
+  <van-field
+    value="{{ phonenum }}"
+    required
+    clearable
+    label="电话号码"
+    placeholder="请输入电话号码"
+    bind:change="onChangePhonum"
+  />
+  
+  <van-field
+    value="{{ qqnum }}"
+    
+    clearable
+    label="QQ"
+    placeholder="请输入QQ号码"
+  />
+  
+  <van-field
+    value="{{ wxnum }}"
+    
+    clearable
+    label="微信号"
+    placeholder="请输入微信号"
+  />
+</van-cell-group>
+</view>
+<view class="registerButton"><button type="primary" bindtap="register">注册</button></view>
+</view>

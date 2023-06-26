@@ -1,0 +1,66 @@
+<!--pages/center/center.wxml-->
+<view class="profile-container">
+  <view class="profile-header">
+    <!-- <image src="../../"></image> -->
+    <view class="user-avartar" bindtap="gotoLogin">
+      <van-image
+      round
+      width="50px"
+      height="50px"
+      src="https://img.yzcdn.cn/vant/cat.jpeg"
+      />
+      <view class="loginDesc">
+        <view >未登录</view>
+        <view>点击登录账号</view>
+      </view>
+    </view>
+  </view>
+  <view class="profile-center">
+    <view class="profile-score">
+      <view class="profile-value">--</view>
+      <view>环保积分</view>
+    </view>
+    <view class="profile-scoreRecord" bindtap="gotoScoreRecord">
+      <van-icon name="records" size="70rpx" />
+      <view>积分获取记录</view>
+    </view>
+  </view>
+  <view class="profile-bottom">
+    <view class="profile-card" bindtap="gotoMyCollection"><van-icon name="star-o" size="40rpx" />我的收藏
+
+    <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+
+    </view>
+    <view class="line"></view>
+    <view class="profile-card" bindtap="gotoMyCommodity" ><van-icon name="cart-circle-o" size="40rpx" />我的商品
+
+      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+
+      </view>
+    <view class="line"></view>
+    <view class="profile-card" bindtap="gotoMyHistory"><van-icon name="label-o" size="40rpx" />浏览记录
+    
+      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+      
+      </view>
+    <view class="line"></view>
+    <view class="profile-card" bindtap="gotoSuggestions"><van-icon name="newspaper-o" size="40rpx" />意见反馈
+    
+      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+      
+      </view>
+    <view class="line"></view>
+    <view class="profile-card" bindtap="gotoSettings"><van-icon name="setting-o" size="40rpx" />个人设置
+    
+      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+      
+      </view>
+    <view class="line"></view>
+    <view class="profile-card" bindtap="gotoAboutUs"><van-icon name="info-o" size="40rpx" />关于我们
+    
+      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+      
+      </view>
+    <view class="line"></view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+/* pages/classification/classification.wxss */
+.grid-list{
+  display: flex;
+  flex-wrap: wrap; 
+}
+.grid-item{
+  width: 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #efefef;
+  box-sizing: border-box;
+}
+.grid-item image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.grid-item text{
+  font-size: 24rpx;
+  margin-top: 10rpx ;
+}

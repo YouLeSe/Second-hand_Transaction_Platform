@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class="search-view-container">
+
+  <view class="search-view-top">
+  <van-search
+  value="{{ searchvalue }}"
+  placeholder= "请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bindtap="startSearch">搜索</view>
+</van-search>
+  </view>
+  <view class="search-view-history">
+    <view class="history-top">
+      <view class="history-text">最近搜索</view>
+      <van-icon name="delete-o" bindtap="clearHistory"/>
+    </view>  
+    <view class="history-list">
+      <button wx:for="{{historyArr}}" class="history-item" bindtap="tapHistory" data-value="{{item}}">
+      {{item}}
+      </button>
+    
+    </view>
+  </view>
+</view>

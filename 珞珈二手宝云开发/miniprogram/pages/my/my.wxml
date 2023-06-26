@@ -1,0 +1,8 @@
+<!--pages/my/my.wxml-->
+<text>pages/my/my.wxml</text>
+<button bindtap="toRegister" type="primary">
+注册
+</button>
+<button bindtap="toLogingIn" type="primary">
+登陆
+</button>

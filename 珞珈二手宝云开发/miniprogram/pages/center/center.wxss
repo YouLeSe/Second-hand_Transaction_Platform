@@ -1,0 +1,89 @@
+/* pages/center/center.wxss */
+.profile-container{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color:rgb(215, 250, 255); */
+  background-color: white;
+}
+.profile-header{
+  width:100%;
+  height:300rpx;
+  /* background-color:floralwhite; */
+  background-color: white;
+
+  /* padding: 40px; */
+  box-sizing: border-box;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+}
+.profile-header image{
+  position: absolute;
+  height:100%;
+  width:100%;
+}
+.user-avartar{
+  width:100%;
+  height:150rpx;
+  background-color:rgb(237, 248, 246);
+  position:absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.loginDesc{
+  margin-left: 10px;
+  color: rgb(74, 151, 202);
+}
+.profile-center{
+  width: 100%;
+  height:200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: floralwhite;
+}
+.profile-score,.profile-scoreRecord{
+  width:50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+}
+.profile-value{
+  color: red;
+}
+.profile-bottom{
+  width: 100%;
+  height:50%;
+  box-sizing: border-box;
+  /* min-height: 100rpx; */
+  /* background-color: red; */
+}
+.profile-card{
+  width: 80%;
+  margin-left: 10%;
+  height:125rpx;
+  font-size:larger;
+  display: flex;
+  /* justify-content:space-around; */
+  flex-direction: row;
+  align-items:center;
+  overflow: visible;
+  /* background-color: royalblue; */
+}
+.line{
+  width:90%;
+  margin-left: 5%;
+  height:2rpx;
+  background:rgb(228, 225, 225);
+  }
+.arrow{
+  color:rgb(192, 192, 192);
+  padding-left:360rpx ;
+  /* align-items:flex-start; */
+}

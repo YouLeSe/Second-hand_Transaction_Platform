@@ -1,0 +1,48 @@
+/* pages/search/search.wxss */
+.search-view-container
+{
+  position: absolute;
+  top:0px;
+  left:0;
+  bottom: 0;
+  right: 0;
+  background-color: antiquewhite;
+}
+.search-view-top{
+  width: 95%;
+  height: 100rpx;
+  background-color: white;
+}
+.search-view-history{
+  width: 100%;
+  min-height: 200rpx;
+  background-color:white;
+}
+.history-top
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.history-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.history-item{
+  padding: 16rpx 30rpx;
+  background-color: lightgray;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+  color: black;
+}
+
+.history-text
+{
+  font-size: 35rpx;
+}

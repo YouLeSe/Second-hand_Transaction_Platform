@@ -1,0 +1,9 @@
+<!--pages/classification/classification.wxml-->
+<!-- <text>pages/classification/classification.wxml</text> -->
+<view class="grid-list">
+ <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+  <image src="{{item.icon}}"></image>
+  <text>{{item.name}}</text>
+
+ </view>
+</view>

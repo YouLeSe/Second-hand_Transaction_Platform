@@ -1,0 +1,19 @@
+<!--pages/search/searchResult.wxml-->
+<!-- <text>pages/search/searchResult.wxml</text> -->
+<!-- <view>{{goodsName}}</view> -->
+<van-search value="{{ value }}" input-align="center"
+placeholder="请输入搜索关键词"
+bindtap="gotoSearch"
+ />
+ 
+<view class="goodsList">
+<!-- <view wx:for="{{product}}">{{item.information}}</view> -->
+
+<view class="goodsItem" wx:for="{{product}}">
+{{item.information}}
+<image src="{{item.fileid}}" ></image>
+</view>
+</view>
+
+
+

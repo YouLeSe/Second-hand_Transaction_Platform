@@ -1,0 +1,31 @@
+<!--pages/logingin/logingin.wxml-->
+<view class="loggingin">
+<view class="whuicon">
+<image src="/images/whuicon.png"></image>
+</view>
+<view class="titleArea">
+<view class="title">珞珈二手宝</view>
+</view>
+<view class="logginginImf">
+<van-cell-group inset >
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    placeholder="请输入用户名"
+    bind:change="onChangeUsername"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码(6位数以上）"
+    required
+    bind:change="onChangePassword"
+  />
+</van-cell-group>
+</view>
+<view class="logginginButton"><button type="primary" bindtap="loggingin">登陆</button></view>
+<view class="register" bindtap="toRegister">没有账号？点击注册</view>
+</view>
