@@ -1,8 +1,11 @@
 {
   "pages": [
+    
     "pages/home/home",
     "pages/classification/classification",
     "pages/center/center",
+    "pages/center-settings/center-settings",
+    "pages/center-suggestions/center-suggestions",
     "pages/search/search",
     "pages/my/my",
     "pages/search/searchResult",

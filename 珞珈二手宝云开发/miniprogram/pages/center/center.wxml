@@ -44,9 +44,9 @@
       
       </view>
     <view class="line"></view>
-    <view class="profile-card" bindtap="gotoSuggestions"><van-icon name="newspaper-o" size="40rpx" />意见反馈
+    <view class="profile-card" bindtap="gotoSuggestions"><van-icon name="newspaper-o" size="40rpx" /> 意见反馈
     
-      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
+     <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
       
       </view>
     <view class="line"></view>

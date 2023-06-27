@@ -34,7 +34,7 @@ Page({
   },
   gotoSuggestions(){
     wx.navigateTo({
-      url: "/pages/center-suggestions/center-suggestions",
+      url:"/pages/center-suggestions/center-suggestions",
     })
   },
   gotoSettings(){
