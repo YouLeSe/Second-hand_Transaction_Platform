@@ -2,59 +2,59 @@
 
 <view class="update">
   <view class="whuicon">
-  <image src="/images/whuicon.png" />
-  <view class="title">珞珈二手宝</view>
-</view>
-
-<view class="updateImf">
-  <van-cell-group>
-    <van-field
+  <image src="/images/whuicon.png" /></view>
+  <view class="title">个人设置</view>
+  
+  <view class="updateImf">
+    <van-cell-group>
+      <van-field
       value="{{username}}"
       label="用户名"
       placeholder="请输入用户名"
       bind:input="handleUsernameInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{password}}"
       label="修改密码"
       placeholder="请输入密码(6位数以上）"
       bind:input="handlePasswordInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{repassword}}"
       label="确认密码"
       placeholder="请确认密码"
       bind:input="handlerepasswordInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{phone}}"
       label="手机号"
       placeholder="请输入手机号码"
       bind:input="handlePhoneInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{qqnum}}"
       label="QQ"
       placeholder="请输入QQ号码"
       bind:input="handleQQnumInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{wxnum}}"
       label="微信"
       placeholder="请输入微信号"
       bind:input="handleWXnumInput"
-    />
-    <van-field
+      />
+      <van-field
       value="{{stunum}}"
       label="学号"
       placeholder="请输入学号"
       bind:input="handleStunumInput"
-    />
-    <view class="updateButton"><button type="primary" bindtap="update">
-    保存
-    </button>
-    </view>
-  </van-cell-group>
-</view>
+      />
+      <view class="updateButton">
+        <button type="primary" bindtap="update">
+         保存
+        </button>
+      </view>
+    </van-cell-group>
+  </view>
 
 </view>

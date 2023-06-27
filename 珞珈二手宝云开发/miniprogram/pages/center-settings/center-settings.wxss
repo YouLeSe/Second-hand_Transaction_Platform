@@ -1,46 +1,55 @@
 /* pages/center-settings/center-settings.wxss */
 
 .update{
+  /* 设置圆角、边框和阴影效果 */
   border-radius: 25px;
   border: lightgray solid ;
   box-shadow: lightgray 10rpx 10rpx 10rpx;
+  /* 设置上下左右的外边距和flex布局 */
   margin-top: 20%;
   margin-left: 8%;
   margin-right: 8%;
-  /* background-color: violet; */
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
 
 .whuicon{
+  /* 设置内边距和flex布局 */
   padding: 40rpx;
   display: flex;
   justify-content: center;
 }
 .whuicon image{
+  /* 设置图像的宽度和高度 */
   width: 200rpx;
   height: 200rpx;
 }
+
 .titleArea{
+  /* 设置宽度、外边距和flex布局 */
   width: 100%;
-  /* background-color: white; */
   display: flex;
   justify-content: center;
   margin-bottom: 20rpx;
 }
 .title{
+  /* 设置标题的字体大小 */
   font-size: 40rpx;
+  text-align: center;
 }
 
 .updateImf{
+  /* 设置自身的对齐方式、宽度和外边距 */
   align-self: center;
   width: 90%;
-  /* background-color: teal; */
   margin-bottom: 40rpx;
+  margin-top: 20px;
 }
 .updateButton{
+  /* 设置自身的对齐方式、宽度和外边距 */
   align-self: center;
   width: 70%;
   margin-bottom: 50rpx;
+  margin-left: 50px;
 }

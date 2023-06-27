@@ -5,7 +5,7 @@
 <image src="/images/whuicon.png"></image>
 </view>
 <view class="titleArea">
-<view class="title">珞珈二手宝</view>
+<view class="title">意见反馈</view>
 </view>
 <view class="suggestionImf">
 <van-cell-group>

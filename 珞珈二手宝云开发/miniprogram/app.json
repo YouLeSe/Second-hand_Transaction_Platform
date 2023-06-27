@@ -6,6 +6,7 @@
     "pages/center/center",
     "pages/center-settings/center-settings",
     "pages/center-suggestions/center-suggestions",
+    "pages/center-aboutus/center-aboutus",
     "pages/search/search",
     "pages/my/my",
     "pages/search/searchResult",
