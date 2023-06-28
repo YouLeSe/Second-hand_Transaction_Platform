@@ -1,2 +1,25 @@
-<!--pages/center-suggestions/center-suggestions.wxml-->
-<text>pages/center-suggestions/center-suggestions.wxml</text>
+
+
+<view class="complaint">
+  <view class="title">
+    请选择反馈类型
+  </view>
+  <view>
+    <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+      <van-collapse-item title="功能异常" name="1" size = "large">
+        <textarea  class="text-input" placeholder="请输入内容" rows="5"></textarea>
+        <view class="submitButton"><button type="primary" bindtap="submit">提交</button></view>
+      </van-collapse-item>
+      <van-collapse-item title="产品建议" name="2" size = "large">
+        <textarea  class="text-input" placeholder="请输入内容" rows="5"></textarea>
+        <view class="submitButton"><button type="primary" bindtap="submit">提交</button></view>
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+</view>
+
+
+
+
+
+

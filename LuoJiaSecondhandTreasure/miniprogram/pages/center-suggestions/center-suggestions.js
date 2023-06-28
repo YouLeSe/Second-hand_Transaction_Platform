@@ -5,8 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user: {}
+    user: {},
+
+    activeName: '1',
   },
+  onChange(event) {
+    this.setData({
+      activeName: event.detail,
+    });
+  },
+  submit()
+  {
+    wx.navigateBack()
+    wx.showToast({
+      title: '提交成功',
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
