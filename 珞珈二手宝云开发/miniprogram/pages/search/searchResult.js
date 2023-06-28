@@ -8,7 +8,10 @@ Page({
    */
   data: {
     goodsName:String,
-    product:[]
+    dataList:[],
+    page: 0,
+    num: 10,
+    isLoading: false
   },
 
   gotoSearch()
@@ -19,19 +22,33 @@ Page({
     })
   },
   search(){
-    db.collection('database1').where(_.or([
+    this.setData({
+      isLoading: true
+    })
+    wx.showLoading({
+      title: '正在加载',
+    })
+    db.collection('goods').where(_.or([
       {
         information:db.RegExp({
           regexp:this.data.goodsName,
           options:'i',
-        })
+        }),
       }
     ]))
-      .get().then(res=>{
+      .limit(this.data.num).skip(this.data.page).get().then(res=>{
+        console.log(res)
         this.setData({
-          product:res.data
+          dataList:res.data 
         })
+        wx.hideLoading()
+        this.setData({
+          isLoading: false
+        })
+        wx.stopPullDownRefresh()
+
       })
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -79,14 +96,21 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    this.setData({
+      dataList:[],
+      page: 0,
+    })
+    this.search()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
+    this.setData({
+      page: this.data.page + this.data.dataList.length,
 
+    })
   },
 
   /**

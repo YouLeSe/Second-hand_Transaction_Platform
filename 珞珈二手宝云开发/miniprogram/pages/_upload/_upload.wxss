@@ -1,0 +1,27 @@
+/* pages/upload/upload.wxss */
+.line{
+  width:90%;
+  margin-left: 5%;
+  height:2rpx;
+  background:rgb(228, 225, 225);
+}
+.uploadButton{
+  align-self: center;
+  margin-top: 20rpx;
+  width: 40%;
+  margin-bottom: 50rpx;
+}
+.upImageText{
+  margin-bottom: 10rpx;
+}
+.upload-upImage{
+  background-color: white;
+}
+.upPrice{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.leaveWhite{
+  height:15rpx;
+  background-color: white;
+}

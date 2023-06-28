@@ -34,7 +34,7 @@ Page({
   },
   gotoSuggestions(){
     wx.navigateTo({
-      url:"/pages/center-suggestions/center-suggestions",
+      url: "/pages/center-suggestions/center-suggestions",
     })
   },
   gotoSettings(){
@@ -50,8 +50,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  //页面加载时，如果登陆过在user缓存中提取用户信息
   onLoad(options) {
-    
+    let user = wx.getStorageSync('user')
+    if(user)
+    {
+        this.setData({
+        user: user
+      })
+    }
   },
 
   /**
@@ -64,7 +71,15 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  //页面显示时，刚刚登陆则将用户信息存储到user缓存里
   onShow() {
+    let user = wx.getStorageSync('user')
+    if(!user)
+    {
+      this.setData({
+        user:{}
+      })
+    }
     
   },
 

@@ -31,59 +31,47 @@ Page({
   },
   loggingin()
   {
-    db.collection('user').where(_.or([
-      {
-        username:this.data.username,
+  
+    wx.cloud.callFunction({
+      name: "loggingin",
+      data:{
+        username: this.data.username,
+        password: this.data.password
       }
-    ]))
-      .get().then(res=>{
+    })
+    .then(res=>{
         console.log(res)
-        this.setData({
-          user:res.data
-        })
-        if(!this.data.username)
+        if(!res.result.feedBack)
         {
           wx.showToast({
-            title: '请输入用户名',
+            title: res.result.toast,
             icon: 'none'
           })
           return
         }
-        if(!this.data.password)
+        else
         {
+          this.setData({
+            user:res.result.user
+          })
+          let user = wx.getStorageSync('user')
+          user= this.data.user
+          wx.setStorageSync('user', user)
+          let pages = getCurrentPages(); // 当前页的数据，
+          console.log(pages)
+          let prevPage = pages[pages.length - 2]; // 上一页的数据
+          prevPage.setData({
+            user: this.data.user, // 修改上一页的属性值；
+          })
+          wx.navigateBack({
+            delta: 1
+          })
           wx.showToast({
-            title: '请输入密码',
+            title: res.result.toast,
             icon: 'none'
           })
-          return
         }
-        if(!this.data.user[0])
-        {
-          wx.showToast({
-            title: '该用户不存在',
-            icon: 'none'
-          })
-          return
-        }
-        if(this.data.password!==this.data.user[0].password)
-        {
-          wx.showToast({
-            title: '密码输入不正确',
-            icon: 'none'
-            
-          })
-          return
-        }
-        let pages = getCurrentPages(); // 当前页的数据，
-        console.log(pages)
-        let prevPage = pages[pages.length - 2]; // 上一页的数据
-        prevPage.setData({
-          user: this.data.user, // 修改上一页的属性值；
-        })
-        wx.navigateBack({
-          delta: 1
-        })      
-      })
+    })
   },
 
   

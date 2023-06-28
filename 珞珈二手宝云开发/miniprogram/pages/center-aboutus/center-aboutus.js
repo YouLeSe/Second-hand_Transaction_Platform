@@ -1,18 +1,24 @@
-// pages/center-aboutus/center-aboutus.js
+// pages/center-aboutUs/center-aboutUs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    user: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    let user = wx.getStorageSync('user')
+    if(user)
+    {
+        this.setData({
+        user: user
+      })
+    }
   },
 
   /**
@@ -26,7 +32,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    let user = wx.getStorageSync('user')
+    if(!user)
+    {
+      this.setData({
+        user:{}
+      })
+    }
   },
 
   /**

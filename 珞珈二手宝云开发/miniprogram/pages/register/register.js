@@ -141,10 +141,12 @@ Page({
           stunum: this.data.stunum,
           phonenum: this.data.phonenum,
           qqnum: this.data.qqnum,
-          wxnum: this.data.wxnum
+          wxnum: this.data.wxnum,
+          headimg:"",
         }
       })
-      if(this.data.user[0])
+      
+    if(this.data.user[0])
     {
       wx.showToast({
         title: '该用户名已存在',
@@ -152,12 +154,12 @@ Page({
       })
       return
     }
-     wx.showToast({
-      title: '成功注册',
-     })
-     wx.navigateBack({
-      url: '/pages/center/center?user={{this.data.user}}',
-    })
+    
+    
+      wx.navigateBack()
+      wx.showToast({
+        title: '成功登陆',
+      })      
     })
     
   },

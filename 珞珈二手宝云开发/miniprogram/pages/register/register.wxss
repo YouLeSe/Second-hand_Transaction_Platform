@@ -33,6 +33,8 @@
 .registerImf{
   align-self: center;
   width: 90%;
+  margin-top: 20px;
+
   /* background-color: teal; */
   margin-bottom: 40rpx;
 }

@@ -1,25 +1,2 @@
 <!--pages/center-suggestions/center-suggestions.wxml-->
-
-<view class="suggestion">
-<view class="whuicon">
-<image src="/images/whuicon.png"></image>
-</view>
-<view class="titleArea">
-<view class="title">意见反馈</view>
-</view>
-<view class="suggestionImf">
-<van-cell-group>
-  <van-field name="name" label="姓名" placeholder="请输入姓名" />
-  <van-field name="phone" label="手机号码" placeholder="请输入手机号码" />
-  <van-field name="content" label="反馈内容" type="textarea" placeholder="请输入反馈内容" 
-  autosize
-  border="{{ false }}"
-   />
-   </van-cell-group>
-</view>
-
-  
-
-<view class="suggestionButton"><button type="primary" bindtype="submit">提交</button>
-</view>
-</view>
+<text>pages/center-suggestions/center-suggestions.wxml</text>

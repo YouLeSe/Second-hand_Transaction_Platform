@@ -1,18 +1,22 @@
 {
   "pages": [
-    
     "pages/home/home",
     "pages/classification/classification",
     "pages/center/center",
-    "pages/center-settings/center-settings",
-    "pages/center-suggestions/center-suggestions",
-    "pages/center-aboutus/center-aboutus",
     "pages/search/search",
     "pages/my/my",
     "pages/search/searchResult",
     "pages/register/register",
-    "pages/loggingin/loggingin"
-  ],
+    "pages/loggingin/loggingin",
+    "pages/center-aboutUs/center-aboutUs",
+    "pages/center-myCollection/center-myCollection",
+    "pages/center-myCommodity/center-myCommodity",
+    "pages/center-myHistory/center-myHistory",
+    "pages/center-scoreRecord/center-scoreRecord",
+    "pages/center-settings/center-settings",
+    "pages/center-suggestions/center-suggestions",
+    "pages/_upload/_upload"
+   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -29,8 +33,8 @@
         "selectedIconPath": "/images/home_b.png"
       },
       {
-        "pagePath": "pages/classification/classification",
-        "text": "分类",
+        "pagePath": "pages/_upload/_upload",
+        "text": "发布",
         "iconPath": "/images/order_a.png",
         "selectedIconPath": "/images/order_b.png"
       },
@@ -47,6 +51,7 @@
     "van-button": "@vant/weapp/button/index",
     "van-search": "@vant/weapp/search/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-image": "@vant/weapp/image/index"
   }
 }

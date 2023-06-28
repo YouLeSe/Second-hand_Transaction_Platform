@@ -1,0 +1,68 @@
+<!--pages/upload/upload.wxml-->
+<view>请说明商品信息（例：物品简介/所在位置）：</view>
+<view>
+<van-field
+    value="{{ information }}"
+    type="textarea"
+    autosize
+    show-word-limit="true"
+    required
+    clearable
+    maxlength="300"
+    label=""
+    placeholder="请输入商品信息,不超过300字"
+    bind:change="onChangeInformation"
+  />
+</view>
+<!-- <view class="line"></view> -->
+<view class="upPrice">
+<van-field
+  value="{{ price }}"
+  required
+  clearable
+  label="期望价格"
+  placeholder="请输入期望价格"
+  bind:change="onChangePrice"
+/>
+</view>
+<view>
+<van-field
+  value="{{ fieldValue }}"
+  is-link
+  required
+  readonly
+  label="商品分类"
+  placeholder="请选择商品所属类别"
+  bind:tap="onClick"
+/>
+<van-popup show="{{ show }}" round position="bottom">
+  <van-cascader
+    wx:if="{{ show }}"
+    value="{{ cascaderValue }}"
+    title="请选择商品所属类别"
+    options="{{ options }}"
+    bind:close="onClose"
+    bind:finish="onFinish"
+  />
+</van-popup>
+</view>
+
+<view class="upImageText">请上传商品图片（3张及以内）：</view>
+<view class="leaveWhite"></view>
+<view class="upload-upImage">
+<van-uploader
+file-list="{{ imageFileList }}"
+bind:after-read="afterRead"
+multiple="{{true}}"
+max-count="3"
+deleteable="{{true}}"
+upload-text="上传图片"
+catch:delete="deleteImg"
+preview-size="250rpx"
+/>
+</view>
+
+<view class="uploadButton"><button type="primary" bindtap="_upload">上架商品</button></view>
+
+
+

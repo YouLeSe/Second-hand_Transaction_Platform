@@ -14,7 +14,8 @@ exports.main = async (event, context) => {
       stunum:event.stunum,
       phonenum:event.phonenum,
       qqnum:event.qqnum,
-      wxnum:event.wxnum
+      wxnum:event.wxnum,
+      headimg:event.headimg
     }
   })
   }

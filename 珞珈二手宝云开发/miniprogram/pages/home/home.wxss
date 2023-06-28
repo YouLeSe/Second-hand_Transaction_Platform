@@ -1,46 +1,39 @@
 /* pages/home/home.wxss */
-.home-container{
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 255, 255);
-}
 
-/*  搜索框  */
-
-
-/*  分类  */
 .home-type{
   width: 100%;
-  height: 80px;
-  background: rgb(224, 224, 224);
+  height: 40px;
 }
 
 /*  商品列表  */
 .home-list {
-  width: 100%;
-  background: #fff;
-  border: 2px solid #ccc;
+  width: 90%;
+  background: rgba(131, 123, 124, 0.247);
+  border: 2px solid #cdeffd;
   border-radius: 10px;
   margin: 0 20px;
+  
+}
+.home-list-good{
+  border: 5px solid rgb(77, 69, 69);
+  border-radius: 20px;
 }
 
-.home-list-good {
-  background: #cdeffd;
-  border: 2px solid #ccc;
+
+.home-list-good-top {
+  background: #ccc;
+  /* border: 2px solid rgb(216, 31, 31); */
   border-radius: 10px;
   display: flex;
+  
+}
+.home-list-spacing {
+  height: 50rpx; /* 设置间隔高度为10像素 */
+  background: rgba(131, 123, 124, 0.247);
 }
 
 .home-list-good-head {
-  width: 50px;
-  height: 50px;
-  border: solid 0.05rem #34b3de;
-  border-radius: 50%;
-  overflow: hidden;
-  background-size: cover;
-  background-position: 50%;
-  background-color: #fff;
-  text-align: center;
+  margin-left: 10rpx;
 }
 
 .home-list-good-up {
@@ -69,13 +62,14 @@
 }
 
 .home-list-good-details {
-  background-color: #fff;
-  margin: 20px 30px;
+  background-color: rgb(231, 171, 114);
+  margin: 20px 20px;
   letter-spacing: 1px;
   font-size: 14px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  padding: 5px;
+  /* -webkit-line-clamp: 5; */
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   white-space: normal;
@@ -100,21 +94,58 @@
 
 .home-list-good-contact {
   display: flex;
+  background-color:#CCCCCC;
+  justify-content: center;
+  height: 80rpx;
+}
+
+.home-list-good-contact {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.home-list-good-contact .icon-chato{
-  margin-left: 100px;
+.icon-chato,
+.icon-contac,
+.icon-phone,
+.icon-star {
+  flex: 1;
+  text-align: center;
 }
 
-.home-list-good-contact .icon-contact{
+/* .home-list-good-contact .icon-chato{
+  /* padding-left: 5px; */
+  /* background-color: bisque;
+} */
+
+/* .home-list-good-contact .icon-contact{
+  
+} */
+
+/* .home-list-good-contact .icon-phone{
+  margin-left: 40px; 
+} */
+
+/* .home-list-good-contact .icon-star{
   margin-left: 40px;
+}  */
+
+.add-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
 }
 
-.home-list-good-contact .icon-phone{
-  margin-left: 40px;
+.add-button {
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
 }
 
-.home-list-good-contact .icon-star{
-  margin-left: 40px;
-}
+
+
+
+
+

@@ -7,7 +7,7 @@ const _ = db.command
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  db.collection("user").where({
+  return await db.collection("user").where({
     username:event.username
   }).update({
     data:{
@@ -16,7 +16,9 @@ exports.main = async (event, context) => {
       stunum:event.stunum,
       phonenum:event.phonenum,
       qqnum:event.qqnum,
-      wxnum:event.wxnum
-    }
-  })
+      wxnum:event.wxnum,
+      headimg: event.headimg
+    }})
+    
+  
 }

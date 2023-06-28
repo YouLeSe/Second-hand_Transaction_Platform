@@ -46,10 +46,14 @@
   margin-bottom: 40rpx;
   margin-top: 20px;
 }
-.updateButton{
-  /* 设置自身的对齐方式、宽度和外边距 */
+
+._button1{
   align-self: center;
   width: 70%;
-  margin-bottom: 50rpx;
-  margin-left: 50px;
+  margin-bottom: 30rpx;
+}
+._button2{
+  align-self: center;
+  width: 70%;
+  margin-bottom: 30rpx;
 }
