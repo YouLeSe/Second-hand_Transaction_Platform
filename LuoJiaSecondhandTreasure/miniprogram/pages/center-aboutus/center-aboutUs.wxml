@@ -1,16 +1,55 @@
 
-<view>
-  关于我们  
+<view class="whuicon">
+  <image src="/images/whuicon.png"></image>
 </view>
 
-<view class="head">
-  珞珈二手宝
+
+<view class="titleArea">
+  <view class="title">
+    珞珈二手宝 v1.0.0
+  </view>
 </view>
 
 <view>
   
 </view>
 
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="产品简介" name="1" size = "large">
+    <view class="introduction">
+      珞珈二手宝致力于为武汉大学用户提供一个便捷的平台来买卖二手物品，针对武汉大学的同学面临的二手物品信息搜集难题，提升同学们的学习生活体验。
+    </view>
+    <view class="introduction">
+      用户可以在小程序上注册账号，发布自己要出售的物品或者提出对所需物品的需求，浏览和搜索其他用户发布的物品。我们提供了用户的联系方式，让用户可以方便的联系和交易。
+    </view>
+  </van-collapse-item>
 
+  <van-collapse-item title="团队成员" name="2" size = "large">
+    <van-card
+    tag="管理员"
+    desc="项目经理"
+    title="肖超豪"
+    thumb="/images/xch.png"
+    />
+    <van-card
+    tag="潜力股"
+    desc="技术经理"
+    title="田晓枫"
+    thumb="/images/txf.png"
+    />
+    <van-card
+    tag="摸鱼仔"
+    desc="产品经理"
+    title="彭文乐"
+    thumb="/images/pwl.png"
+    />
+    <van-card
+    tag="技术佬"
+    desc="员工"
+    title="许锦浩"
+    thumb="/images/xjh.png"
+    />
+  </van-collapse-item>
 
+</van-collapse>
 

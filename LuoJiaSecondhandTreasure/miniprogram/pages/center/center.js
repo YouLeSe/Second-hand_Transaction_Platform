@@ -44,7 +44,7 @@ Page({
   },
   gotoAboutUs(){
     wx.navigateTo({
-      url: "/pages/center-aboutus/center-aboutus",
+      url: "/pages/center-aboutUs/center-aboutUs",
     })
   },
   /**
