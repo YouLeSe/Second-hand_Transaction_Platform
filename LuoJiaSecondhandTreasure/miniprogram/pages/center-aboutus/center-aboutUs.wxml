@@ -1,2 +1,16 @@
-<!--pages/center-aboutUs/center-aboutUs.wxml-->
-<text>pages/center-aboutUs/center-aboutUs.wxml</text>
+
+<view>
+  关于我们  
+</view>
+
+<view class="head">
+  珞珈二手宝
+</view>
+
+<view>
+  
+</view>
+
+
+
+
