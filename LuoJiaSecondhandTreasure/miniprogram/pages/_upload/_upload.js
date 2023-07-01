@@ -31,21 +31,25 @@ Page({
     show: false,
     options,
     fieldValue:"",
-    
+    isupload:false,
 
     imageFileList: [],
     price:"",
     lable:"",
     information:"",
     time:"",
-    isSold:"0",
+    isSold:false,
     publisher:"",
 
     checked: false,
   },
 
   _upload(){
-    var timex;
+    if(this.data.isupload)
+      return
+    else{
+    let timex;
+    const currenttime = new Date()
     const now=new Date()
     const year=now.getFullYear()
     const month=now.getMonth()+1
@@ -62,9 +66,99 @@ Page({
       
     timex=year+"."+month+"."+day+" "+hour+":"+minute+":"+second
     this.data.time=timex
+
+    if(!this.data.information)
+    {
+      wx.showToast({
+        title:"请输入商品信息",
+        icon:"none"
+      })
+      return
+    }
+    if(!this.data.price)
+    {
+      wx.showToast({
+        title:"请输入商品期望价格",
+        icon:"none"
+      })
+      return
+    }
+    else
+    {
+      this.setData({
+        isupload: true
+      })
+      let str=this.data.price
+      let patt1 = /[0-9]+/;
+      let str1=str.match(patt1)
+      console.log(str)
+      //console.log(str1[0])
+      //console.log(str1.)
+      if(!str1)
+      {
+        wx.showToast({
+          title:"价格只能为数字",
+          icon:"none"
+        })
+        this.setData({
+          isupload:false
+        })
+        return
+      }
+      else if(str!==str1[0])
+      {
+        wx.showToast({
+          title:"价格只能为数字",
+          icon:"none"
+        })
+        this.setData({
+          isupload:false
+        })
+        return
+      }
+    }
+    if(!this.data.lable)
+    {
+      wx.showToast({
+        title:"请设置商品分类",
+        icon:"none"
+      })
+      this.setData({
+        isupload:false
+      })
+      return
+    }
+    if(!this.data.imageFileList[0])
+    {
+      wx.showToast({
+        title:"请上传商品图片",
+        icon:"none"
+      })
+      this.setData({
+        isupload:false
+      })
+      return
+    }
+
     this.setData({
       publisher: this.data.user[0].username
     })
+    db.collection('user').where(_.or([{
+      username:this.data.user[0].username
+    }]))
+    .get().then(res0=>{
+      console.log("11111")
+      console.log(res0)
+      if(res0.data.length===0){
+        wx.showToast({
+          title: '本用户不存在请重新注册',
+          icon:"none"
+        })
+        this.setData({
+          isupload:false
+        })
+        return
+      }
     wx.cloud.callFunction({
       name:"uploadd",
       data:{
@@ -75,9 +169,32 @@ Page({
         time: this.data.time,
         isSold: this.data.isSold,
         publisher: this.data.publisher,
-        headimg:this.data.headimg,
+        headimg:this.data.user[0].headimg,
+        qqnum:this.data.user[0].qqnum,
+        phonenum:this.data.user[0].phonenum,
+        wxnum:this.data.user[0].wxnum,
+        currenttime:currenttime
       }
+    }).then(res=>{
+      console.log(res)
+      this.setData({
+        information:"",
+        price:"",
+        lable:"",
+        fieldValue:"",
+        imageFileList:[]
+      })
+      this.setData({
+        isupload:false
+      })
+      wx.navigateBack()
+      wx.showToast({
+        title: '上传成功',
+      })
     })
+    })
+  }
+
   },
 //封装上传图片函数,利用小程序云函数
   uploadFilePromise(fileItem) {
@@ -109,7 +226,7 @@ Page({
         console.log(data)
         wx.hideLoading()
         wx.showToast({ title: '上传成功', icon: 'none' });
-        const newFileList = data.map(item => ({ url: item.fileID }));
+        const newFileList = data.map(item => ( {url:item.fileID} ));
         // this.imageFileId.unshift(item.fileID)
         let index= event.detail.index
         this.setData({ 
@@ -133,6 +250,16 @@ Page({
     console.log(this.data)
     this.data.imageFileList.splice([index],1)
     this.setData({ imageFileList: this.data.imageFileList});
+  },
+
+  gotoLogin(){
+    // console.log(this.data.user)
+    if(!this.data.user[0])
+    {
+      wx.navigateTo({
+        url: "/pages/loggingin/loggingin",
+      })
+    }
   },
 
   onClick() {
@@ -173,13 +300,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    let user = wx.getStorageSync('user')
-    if(user)
-    {
-        this.setData({
-        user: user
-      })
-    }
+    
   },
 
   /**
@@ -198,6 +319,12 @@ Page({
     {
       this.setData({
         user:{}
+      })
+    }
+    if(user)
+    {
+        this.setData({
+        user: user
       })
     }
   },

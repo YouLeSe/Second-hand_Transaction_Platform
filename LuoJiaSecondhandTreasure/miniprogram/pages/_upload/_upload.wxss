@@ -5,21 +5,25 @@
   height:2rpx;
   background:rgb(228, 225, 225);
 }
+.upload-header{
+  margin-top: 100rpx;
+}
 .uploadButton{
-  align-self: center;
+  margin-left: 30%;
   margin-top: 20rpx;
   width: 40%;
   margin-bottom: 50rpx;
 }
 .upImageText{
+  margin-top: 50rpx;
   margin-bottom: 10rpx;
 }
 .upload-upImage{
   background-color: white;
 }
 .upPrice{
-  margin-top: 10rpx;
-  margin-bottom: 10rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
 }
 .leaveWhite{
   height:15rpx;

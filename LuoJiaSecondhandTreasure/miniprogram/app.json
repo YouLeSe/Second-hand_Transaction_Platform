@@ -11,11 +11,11 @@
     "pages/center-aboutUs/center-aboutUs",
     "pages/center-myCollection/center-myCollection",
     "pages/center-myCommodity/center-myCommodity",
-    "pages/center-myHistory/center-myHistory",
     "pages/center-scoreRecord/center-scoreRecord",
     "pages/center-settings/center-settings",
     "pages/center-suggestions/center-suggestions",
-    "pages/_upload/_upload"
+    "pages/_upload/_upload",
+    "pages/treeRule/treeRule"
    ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -52,6 +52,7 @@
     "van-search": "@vant/weapp/search/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-    "van-image": "@vant/weapp/image/index"
+    "van-image": "@vant/weapp/image/index",
+    "van-icon": "@vant/weapp/icon/index"
   }
 }

@@ -3,7 +3,7 @@
   border-radius: 25px;
   border: lightgray solid ;
   box-shadow: lightgray 10rpx 10rpx 10rpx;
-  margin-top: 20%;
+  margin-top: 12%;
   margin-left: 8%;
   margin-right: 8%;
   /* background-color: violet; */
@@ -34,12 +34,16 @@
   align-self: center;
   width: 90%;
   margin-top: 20px;
-
   /* background-color: teal; */
   margin-bottom: 40rpx;
 }
 .registerButton{
   align-self: center;
   width: 70%;
-  margin-bottom: 50rpx;
+}
+.registers{
+  font-size: 20rpx;
+  align-self: center;
+  margin-bottom: 40rpx;
+
 }

@@ -16,7 +16,12 @@ exports.main = async (event, context) => {
       time: event.time,
       isSold: event.isSold,
       publisher: event.publisher,
-      headimg: event.headimg
+      headimg: event.headimg,
+      headimg:event.headimg,
+      qqnum:event.qqnum,
+      phonenum:event.phonenum,
+      wxnum:event.wxnum,
+      currenttime:event.currenttime,
     }
   })
   }

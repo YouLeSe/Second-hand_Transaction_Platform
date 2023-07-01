@@ -6,7 +6,7 @@
   border: lightgray solid ;
   box-shadow: lightgray 10rpx 10rpx 10rpx;
   /* 设置上下左右的外边距和flex布局 */
-  margin-top: 20%;
+  margin-top: 8%;
   margin-left: 8%;
   margin-right: 8%;
   justify-content: center;
@@ -33,6 +33,7 @@
   justify-content: center;
   margin-bottom: 20rpx;
 }
+
 .title{
   /* 设置标题的字体大小 */
   font-size: 40rpx;

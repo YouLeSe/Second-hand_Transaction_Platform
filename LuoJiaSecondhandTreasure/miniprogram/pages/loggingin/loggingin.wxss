@@ -1,6 +1,6 @@
 /* pages/logingin/logingin.wxss */
 .loggingin{
-  border-radius: 25px;
+  border-radius: 25rpx;
   border: lightgray solid ;
   box-shadow: lightgray 10rpx 10rpx 10rpx;
   margin-top: 35%;

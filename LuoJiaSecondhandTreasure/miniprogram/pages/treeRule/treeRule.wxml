@@ -1,0 +1,14 @@
+<!--pages/treeRule/treeRule.wxml-->
+<view class="topText">您目前一共获得了{{user[0].score}}积分</view>
+<van-image width="700rpx" height="700rpx" src="/images/大树.png" class="bigTree" />
+<view class="textBorder">
+  <view class="topRuleText">树苗等级规则：</view>
+  <view class="centerRuleText">lv1:环保积分小于100分</view>
+  <view class="centerRuleText">lv2:环保积分大于等于100分，小于500分</view>
+  <view class="centerRuleText">lv3:环保积分大于等于500分，小于1500分</view>
+  <view class="centerRuleText">lv4:环保积分大于等于1500分</view>
+  <view class="centerRuleText">环保积分等于您卖出商品的价格的总和</view>
+</view>
+<van-image width="750rpx" height="70rpx" src="/images/艺术字.png" class="bottomText" />
+
+

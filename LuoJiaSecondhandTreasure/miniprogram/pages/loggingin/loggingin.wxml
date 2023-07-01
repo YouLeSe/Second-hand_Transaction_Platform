@@ -20,12 +20,12 @@
     value="{{ password }}"
     type="password"
     label="密码"
-    placeholder="请输入密码(6位数以上）"
+    placeholder="请输入6-16位密码"
     required
     bind:change="onChangePassword"
   />
 </van-cell-group>
 </view>
-<view class="logginginButton"><button type="primary" bindtap="loggingin">登陆</button></view>
+<view class="logginginButton"><button type="primary" bindtap="loggingin">登录</button></view>
 <view class="register" bindtap="toRegister">没有账号？点击注册</view>
 </view>

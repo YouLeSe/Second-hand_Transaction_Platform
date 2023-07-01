@@ -1,1 +1,130 @@
-/* pages/center-myCollection/center-myCollection.wxss */
+/* pages/home/home.wxss */
+
+.home-type{
+  width: 100%;
+  height: 40px;
+}
+
+/*  商品列表  */
+.home-list {
+  width: 90%;
+  /* background: rgb(230, 245, 250); */
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 10rpx;
+}
+.home-list-good-none{
+  border: 5px solid rgb(77, 69, 69);
+  height: 600rpx;
+  background: lightgray;
+  border-radius: 20px;
+  margin-bottom: 10rpx;
+  margin-top: 25rpx;
+}
+.icon-none{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 53%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.home-list-good{
+  border: 5px solid rgb(77, 69, 69);
+  background: rgb(238, 248, 252);
+  border-radius: 20px;
+  margin-bottom: 10rpx;
+  margin-top: 25rpx;
+
+}
+
+
+.home-list-good-top {
+  /* background: #ccc; */
+  /* border: 2px solid rgb(216, 31, 31); */
+  border-radius: 10px;
+ 
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.home-list-good-head {
+  margin-top: 30rpx;
+}
+
+
+
+.home-list-good-up-name {
+  margin-top: 45rpx;
+  font-size: 36rpx;
+}
+
+.home-list-good-up-date {
+  font-size: 24rpx;
+  /* color: rgba(0, 0, 0, 0.76); */
+}
+
+.home-list-good-price {
+  margin-top: 50rpx;
+  
+  font-size: 40rpx;
+}
+
+.home-list-good-details {
+  padding: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(204, 242, 248);
+  margin: 30rpx 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  /* -webkit-line-clamp: 5; */
+  
+}
+
+.home-list-good-details-image
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.home-list-good-details-image image{
+  height: 180rpx;
+  width: 180rpx;
+  margin-right: 19rpx;
+}
+
+.home-list-good-details-information
+{
+  font-size: 25rpx;
+  width:100%;
+  margin: 10rpx;
+  margin-left: 20rpx;
+}
+
+.home-list-good-contact {
+  display: flex;
+  padding: 20rpx;
+  background-color:#b7d5dd;
+  justify-content: center;
+}
+
+
+
+.icon-chato,
+.icon-contac,
+.icon-phone,
+.icon-star {
+  flex: 1;
+  text-align: center;
+}
+
+.CollectionNumber{
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+  align-self: center;
+}

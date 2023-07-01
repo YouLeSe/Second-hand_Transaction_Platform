@@ -31,7 +31,7 @@
     value="{{ password }}"
     type="password"
     label="密码"
-    placeholder="请输入密码(6位数以上）"
+    placeholder="请输入6-16位密码"
     required
     bind:change="onChangePassword"
   />
@@ -47,7 +47,6 @@
 
   <van-field
     value="{{ phonenum }}"
-    required
     clearable
     label="电话号码"
     placeholder="请输入电话号码"
@@ -56,10 +55,11 @@
   
   <van-field
     value="{{ qqnum }}"
-    
     clearable
     label="QQ"
     placeholder="请输入QQ号码"
+    bind:change="onChangeQQnum"
+
   />
   
   <van-field
@@ -68,8 +68,11 @@
     clearable
     label="微信号"
     placeholder="请输入微信号"
+    bind:change="onChangeWXnum"
+
   />
 </van-cell-group>
 </view>
 <view class="registerButton"><button type="primary" bindtap="register">注册</button></view>
+<view class="registers">联系方式至少填写一个</view>
 </view>

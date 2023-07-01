@@ -1,2 +1,46 @@
 <!--pages/center-myCommodity/center-myCommodity.wxml-->
-<text>pages/center-myCommodity/center-myCommodity.wxml</text>
+<view class = "home-list" wx:for="{{dataList}}" wx:key="index">
+          <van-popup
+          show="{{ show }}"
+          round
+          position="bottom"
+          custom-style="height: 20%"
+          bind:close="onClose"
+        ><view class="deleteButton"><button data-item="{{item}}" bindtap="delete" type="primary">确认删除</button></view></van-popup>
+        <view class="home-list-good">
+          <!-- 顶部信息 -->
+          <view class = "home-list-good-top">
+            <!-- 后面可以通过img组件来显示 -->
+            <view class = "home-list-good-head">
+              <van-image round width="100rpx" height="100rpx" fit="fill" src="{{item.headimg}}"></van-image>
+            </view>
+            <view class = home-list-good-up>
+              <view class="home-list-good-up-name">
+              {{item.publisher}}
+              </view>
+              <view class="home-list-good-up-date">
+              {{item.time}}
+              </view>
+            </view>
+            <view class = "home-list-good-price">
+              ¥{{item.price}}
+            </view>
+          </view>
+        <!-- 信息主要部分-->
+        <view class = "home-list-good-details">
+            <view class="home-list-good-details-information">{{item.information}}</view>
+              <view wx:for="{{item.imageFileList}}" wx:for-item="item1" wx:key="index" class="home-list-good-details-image">
+            <image width = "180rpx" height = "180rpx" src="{{item1.url}}" bindtap="toPreview" data-imageFileList="{{item.imageFileList}}" data-index="{{index}}"></image>
+            </view>
+          </view>
+          <!-- 功能图标模块 -->
+          <view class="home-list-good-contact">
+            <van-icon name="passed" size="30px" bind:click="check" data-item="{{item}}" class="icons"/>
+            <van-icon name="delete-o" size="30px" bind:click="popup" class="icons"/>
+          </view>
+        </view>
+        <view class="home-list-spacing"></view>
+      </view>
+      <view class="CommodityNumber">
+      您有{{dataList.length}}条商品
+      </view>

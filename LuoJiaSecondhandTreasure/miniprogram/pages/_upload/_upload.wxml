@@ -1,8 +1,9 @@
 <!--pages/upload/upload.wxml-->
-<view>请说明商品信息（例：物品简介/所在位置）：</view>
+<view bindtap="gotoLogin" >
+<view class="upload-header">请说明商品信息（例：物品简介/所在位置）：</view>
 <view>
 <van-field
-    value="{{ information }}"
+    model:value="{{ information }}"
     type="textarea"
     autosize
     show-word-limit="true"
@@ -17,7 +18,7 @@
 <!-- <view class="line"></view> -->
 <view class="upPrice">
 <van-field
-  value="{{ price }}"
+  model:value="{{ price }}"
   required
   clearable
   label="期望价格"
@@ -25,9 +26,9 @@
   bind:change="onChangePrice"
 />
 </view>
-<view>
+<view >
 <van-field
-  value="{{ fieldValue }}"
+  model:value="{{ fieldValue }}"
   is-link
   required
   readonly
@@ -63,6 +64,7 @@ preview-size="250rpx"
 </view>
 
 <view class="uploadButton"><button type="primary" bindtap="_upload">上架商品</button></view>
+</view>
 
 
 

@@ -15,7 +15,9 @@ exports.main = async (event, context) => {
       phonenum:event.phonenum,
       qqnum:event.qqnum,
       wxnum:event.wxnum,
-      headimg:event.headimg
+      headimg:event.headimg,
+      clctList: [],
+      score:0,
     }
   })
   }

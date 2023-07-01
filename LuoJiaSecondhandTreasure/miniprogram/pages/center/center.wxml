@@ -5,59 +5,52 @@
     <view class="user-avartar" bindtap="gotoLogin">
       <van-image
       round
-      width="50px"
-      height="50px"
+      width="100rpx"
+      height="100rpx"
       src="https://img.yzcdn.cn/vant/cat.jpeg"
       />
       <view class="loginDesc" >
-        <view >未登录</view>
+        <view>未登录</view>
         <view>点击登录账号</view>
       </view>
-      <!-- <view class="loginDesc" >{{user[0].username}}</view> -->
     </view>
   </view>
   <view class="profile-center">
     <view class="profile-score">
       <view class="profile-value">--</view>
-      <view>环保积分</view>
+      <view class="proflie-text">环保积分</view>
     </view>
-    <view class="profile-scoreRecord" bindtap="gotoLogin">
-      <van-icon name="records" size="70rpx" />
-      <view>积分获取记录</view>
+    <view class="profile-score">
+      <view class="profile-value">--</view>
     </view>
   </view>
   <view class="profile-bottom">
-    <view class="profile-card" bindtap="gotoLogin"><van-icon name="star-o" size="40rpx" />我的收藏
+    <view class="profile-card" bindtap="gotoLogin"><van-icon name="star-o" size="40rpx" /><view class="proflie-text">我的收藏</view>
 
     <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
 
     </view>
     <view class="line"></view>
-    <view class="profile-card" bindtap="gotoLogin" ><van-icon name="cart-circle-o" size="40rpx" />我的商品
+    <view class="profile-card" bindtap="gotoLogin" ><van-icon name="cart-circle-o" size="40rpx" /><view class="proflie-text">我的商品</view>
 
       <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
 
       </view>
+    
     <view class="line"></view>
-    <view class="profile-card" bindtap="gotoLogin"><van-icon name="label-o" size="40rpx" />浏览记录
+    <view class="profile-card" bindtap="gotoLogin"><van-icon name="newspaper-o" size="40rpx" /><view class="proflie-text">意见反馈</view>
     
       <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
       
       </view>
     <view class="line"></view>
-    <view class="profile-card" bindtap="gotoLogin"><van-icon name="newspaper-o" size="40rpx" />意见反馈
+    <view class="profile-card" bindtap="gotoLogin"><van-icon name="setting-o" size="40rpx" /><view class="proflie-text">个人设置</view>
     
       <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
       
       </view>
     <view class="line"></view>
-    <view class="profile-card" bindtap="gotoLogin"><van-icon name="setting-o" size="40rpx" />个人设置
-    
-      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
-      
-      </view>
-    <view class="line"></view>
-    <view class="profile-card" bindtap="gotoLogin"><van-icon name="info-o" size="40rpx" />关于我们
+    <view class="profile-card" bindtap="gotoAboutUs"><van-icon name="info-o" size="40rpx" /><view class="proflie-text">关于我们</view>
     
       <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
       
@@ -76,20 +69,29 @@
       round
       width="50px"
       height="50px"
-      src="https://img.yzcdn.cn/vant/cat.jpeg"
+      src="{{user[0].headimg}}"
+      bind:click="toShowPopup"
       />
       <view class="loginDesc" >{{user[0].username}}</view>
     </view>
   </view>
   <view class="profile-center">
     <view class="profile-score">
-      <view class="profile-value">--</view>
+      <view class="profile-numValue">{{user[0].score}}</view>
       <view>环保积分</view>
     </view>
-    <view class="profile-scoreRecord" bindtap="gotoScoreRecord">
-      <van-icon name="records" size="70rpx" />
-      <view>积分获取记录</view>
-    </view>
+      <view class="profile-scoreRecord" wx:if="{{user[0].score<100}}" bindtap="gotoTreeRule">
+        <van-image width="150rpx" height="150rpx" src="/images/树苗1.png" />
+        <view class="profile-numValue">树苗等级lv1</view></view>
+      <view class="profile-scoreRecord" wx:if="{{user[0].score<500&&user[0].score>=100}}" bindtap="gotoTreeRule">
+        <van-image width="150rpx" height="150rpx" src="/images/树苗2.png" />
+        <view class="profile-numValue">树苗等级lv2</view></view>
+      <view class="profile-scoreRecord" wx:if="{{user[0].score<1500&&user[0].score>=500}}" bindtap="gotoTreeRule">
+        <van-image width="150rpx" height="150rpx" src="/images/树苗3.png" />
+        <view class="profile-numValue">树苗等级lv3</view></view>
+      <view class="profile-scoreRecord" wx:if="{{user[0].score>=1500}}" bindtap="gotoTreeRule">
+        <van-image width="150rpx" height="150rpx" src="/images/树苗4.png" />
+        <view class="profile-numValue">树苗等级lv4</view></view>
   </view>
   <view class="profile-bottom">
     <view class="profile-card" bindtap="gotoMyCollection"><van-icon name="star-o" size="40rpx" />我的收藏
@@ -103,12 +105,7 @@
       <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
 
       </view>
-    <view class="line"></view>
-    <view class="profile-card" bindtap="gotoMyHistory"><van-icon name="label-o" size="40rpx" />浏览记录
     
-      <view class="arrow"><van-icon name="arrow" size="40rpx" /></view>
-      
-      </view>
     <view class="line"></view>
     <view class="profile-card" bindtap="gotoSuggestions"><van-icon name="newspaper-o" size="40rpx" />意见反馈
     
@@ -131,3 +128,13 @@
   </view>
 </view>
 </view>
+
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose">
+  <view class="uploadButton"><button type="primary" bindtap="clickBtn">上传头像</button></view>
+  
+</van-popup>

@@ -1,0 +1,35 @@
+/* pages/treeRule/treeRule.wxss */
+.bigTree{
+  margin-left:25rpx;
+  margin-top: 50rpx;
+}
+.topText{
+  margin-top: 20rpx;
+  align-self: center;
+  color:rgb(74, 151, 202);
+}
+.topRuleText{
+  align-self: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 40rpx;
+  color:black;
+}
+.centerRuleText{
+  margin-top:10rpx;
+  margin-left: 5%;
+}
+.textBorder{
+  margin-top: 100rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  border: 2rpx rgb(74, 151, 202) solid;
+  background-color: rgb(231, 255, 255);
+  padding-bottom: 30rpx;
+}
+.bottomText{
+  margin-top: 40rpx;
+  align-self: center;
+}

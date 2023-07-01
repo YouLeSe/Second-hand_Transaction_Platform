@@ -31,7 +31,7 @@ exports.main = async (event, context) => {
       feedBack=false;
     }
     else{
-      toast="成功登陆";
+      toast="成功登录";
       feedBack=true;
       user=res.data;
     }

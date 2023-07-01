@@ -36,6 +36,7 @@
 .loginDesc{
   margin-left: 10px;
   color: rgb(74, 151, 202);
+  font-size: 30rpx;
 }
 .profile-center{
   width: 100%;
@@ -56,7 +57,16 @@
 }
 .profile-value{
   color: red;
+  font-size: 30rpx;
 }
+.proflie-text{
+  font-size: 30rpx;
+}
+
+.profile-numValue{
+  color:rgb(74, 151, 202);
+}
+
 .profile-bottom{
   width: 100%;
   height:50%;
@@ -86,4 +96,10 @@
   color:rgb(192, 192, 192);
   padding-left:360rpx ;
   /* align-items:flex-start; */
+}
+.uploadButton{
+  margin-left:30%;
+  margin-top: 100rpx;
+  width: 40%;
+  margin-bottom: 50rpx;
 }

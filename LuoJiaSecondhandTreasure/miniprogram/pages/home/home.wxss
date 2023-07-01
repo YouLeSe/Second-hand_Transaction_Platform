@@ -8,102 +8,96 @@
 /*  商品列表  */
 .home-list {
   width: 90%;
-  background: rgba(131, 123, 124, 0.247);
-  border: 2px solid #cdeffd;
+  /* background: rgb(230, 245, 250); */
   border-radius: 10px;
   margin: 0 20px;
-  
+  padding: 10rpx;
 }
 .home-list-good{
   border: 5px solid rgb(77, 69, 69);
+  background: rgb(238, 248, 252);
   border-radius: 20px;
+  margin-bottom: 10rpx;
+  margin-top: 25rpx;
+
 }
 
 
 .home-list-good-top {
-  background: #ccc;
+  /* background: #ccc; */
   /* border: 2px solid rgb(216, 31, 31); */
   border-radius: 10px;
+ 
+  width: 100%;
+  height: 150rpx;
   display: flex;
-  
-}
-.home-list-spacing {
-  height: 50rpx; /* 设置间隔高度为10像素 */
-  background: rgba(131, 123, 124, 0.247);
+  flex-direction:row;
+  justify-content: space-around;
 }
 
 .home-list-good-head {
-  margin-left: 10rpx;
+  margin-top: 30rpx;
 }
 
-.home-list-good-up {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: 14px;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
+
 
 .home-list-good-up-name {
-  padding-left: 30px;
-  font-size: 18px;
+  margin-top: 45rpx;
+  font-size: 36rpx;
 }
 
 .home-list-good-up-date {
-  padding-left: 30px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.76);
+  font-size: 24rpx;
+  /* color: rgba(0, 0, 0, 0.76); */
 }
 
 .home-list-good-price {
-  padding-left: 100px;
-  font-size: 20px;
+  margin-top: 50rpx;
+  
+  font-size: 40rpx;
 }
 
 .home-list-good-details {
-  background-color: rgb(231, 171, 114);
-  margin: 20px 20px;
+  padding: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(204, 242, 248);
+  margin: 30rpx 0;
   letter-spacing: 1px;
   font-size: 14px;
-  overflow: hidden;
-  display: -webkit-box;
-  padding: 5px;
   /* -webkit-line-clamp: 5; */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  white-space: normal;
+  
 }
 
-.home-list-good-img {
-  margin-left: 70px;
+.home-list-good-details-image
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.home-list-good-image {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 20%;
-  margin: 20px 10px;
-  background-color: #fff;
+.home-list-good-details-image image{
+  height: 180rpx;
+  width: 180rpx;
+  margin-right: 19rpx;
+}
+
+.home-list-good-details-information
+{
+  font-size: 25rpx;
+  width:100%;
+  margin: 10rpx;
+  margin-left: 20rpx;
 }
 
 .home-list-good-contact {
   display: flex;
-  background-color:#CCCCCC;
+  padding: 20rpx;
+  background-color:#b7d5dd;
   justify-content: center;
-  height: 80rpx;
 }
 
-.home-list-good-contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .icon-chato,
 .icon-contac,
@@ -113,36 +107,8 @@
   text-align: center;
 }
 
-/* .home-list-good-contact .icon-chato{
-  /* padding-left: 5px; */
-  /* background-color: bisque;
-} */
 
-/* .home-list-good-contact .icon-contact{
-  
-} */
 
-/* .home-list-good-contact .icon-phone{
-  margin-left: 40px; 
-} */
-
-/* .home-list-good-contact .icon-star{
-  margin-left: 40px;
-}  */
-
-.add-button-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.add-button {
-  background-color: #ff9800;
-  color: #fff;
-  border-radius: 50%;
-  padding: 10px;
-}
 
 
 
